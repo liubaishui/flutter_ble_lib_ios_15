@@ -42,7 +42,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
+// import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 public class FlutterBleLibPlugin implements MethodCallHandler, FlutterPlugin, ActivityAware {
 
@@ -94,9 +94,9 @@ public class FlutterBleLibPlugin implements MethodCallHandler, FlutterPlugin, Ac
         characteristicMonitorChannel.setStreamHandler(plugin.characteristicsMonitorStreamHandler);
     }
 
-    public static void registerWith(Registrar registrar) {
-        init(registrar.context(), registrar.messenger(), registrar.activity());
-    }
+    // public static void registerWith(Registrar registrar) {
+    //     init(registrar.context(), registrar.messenger(), registrar.activity());
+    // }
 
     private void setupAdapter(Context context) {
         bleAdapter = BleAdapterFactory.getNewAdapter(context);
